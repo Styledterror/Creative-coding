@@ -1,1 +1,1 @@
-idk what i am doing
+The GUI is an outward component its is for the user hence the name user interface, CLI on the other hand is inward for the coder.
