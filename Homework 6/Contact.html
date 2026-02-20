@@ -1,0 +1,24 @@
+<html>
+        <li><a href="HomePage.html">Home</a></li>
+    <head>
+        <title>Contact Page</title>
+        <h3>Preferences</h3>
+<form id="prefsForm">
+  
+  <fieldset>
+      <legend>Contact method</legend>
+      <label><input type="checkbox" name="genre" value="email"> email</label><br>
+      <label><input type="checkbox" name="genre" value="phone"> phone</label><br>
+      <label><input type="checkbox" name="genre" value="none"> none</label>
+  </fieldset>
+  <button type="button" id="showBtn">Show selections</button>
+</form>
+<p id="result"></p>
+<script>
+    document.getElementById('showBtn').addEventListener('click', function() {
+        const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
+        const selected = Array.from(checkboxes).map(cb => cb.value);
+        document.getElementById('result').textContent = 'Selected: ' + selected.join(', ');
+    });
+</script>
+    </head>
